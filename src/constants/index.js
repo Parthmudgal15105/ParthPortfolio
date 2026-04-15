@@ -8,23 +8,13 @@ import {
     html,
     css,
     reactjs,
-    redux,
     tailwind,
     nodejs,
     mongodb,
     git,
-    figma,
     docker,
-    meta,
-    starbucks,
-    tesla,
-    shopify,
-    carrent,
-    jobit,
-    tripguide,
-    threejs,
   } from "../assets";
-  
+
   export const navLinks = [
     {
       id: "about",
@@ -35,30 +25,34 @@ import {
       title: "Work",
     },
     {
+      id: "achievements",
+      title: "Achievements",
+    },
+    {
       id: "contact",
       title: "Contact",
     },
   ];
-  
+
   const services = [
     {
-      title: "Frontend Developer",
+      title: "Full-Stack Developer",
       icon: web,
     },
     {
-      title: "Web Developer",
-      icon: mobile,
-    },
-    {
-      title: "React Developer",
+      title: "Backend & Cloud Engineer",
       icon: backend,
     },
     {
-      title: "Web Designer",
+      title: "Competitive Programmer",
       icon: creator,
     },
+    {
+      title: "DevOps & Systems",
+      icon: mobile,
+    },
   ];
-  
+
   const technologies = [
     {
       name: "HTML 5",
@@ -81,10 +75,6 @@ import {
       icon: reactjs,
     },
     {
-      name: "Redux Toolkit",
-      icon: redux,
-    },
-    {
       name: "Tailwind CSS",
       icon: tailwind,
     },
@@ -97,169 +87,114 @@ import {
       icon: mongodb,
     },
     {
-      name: "Three JS",
-      icon: threejs,
-    },
-    {
       name: "git",
       icon: git,
-    },
-    {
-      name: "figma",
-      icon: figma,
     },
     {
       name: "docker",
       icon: docker,
     },
   ];
-  
+
   const experiences = [
     {
-      title: "HTML/CSS",
-      company_name: "",
-      // icon: starbucks,
-      // iconBg: "#383E56",
-      date: "December 2023 - January 2024",
+      title: "B.Tech Computer Science Engineering",
+      company_name: "Maharaja Agrasen Institute of Technology, Delhi",
+      date: "Sep 2023 – Present",
       points: [
-        "Acquired proficiency in HTML and CSS languages through self-directed learning.",
-        "Mastered the fundamental principles of HTML for structuring web pages effectively, Developed competency in CSS to style and enhance the appearance of web content.",
-        "Applied knowledge of HTML and CSS to create responsive and visually appealing web designs",
-        "Explored various resources such as online tutorials, documentation, and practical projects to deepen understanding.",
+        "Maintaining a CGPA of 8.02 while actively building and shipping production-grade software.",
+        "Ranked among the top 5 competitive programmers at MAIT based on active contest performance.",
+        "Grew the college competitive programming community to 500+ students through outreach and peer learning initiatives.",
+        "Coordinated technical seminars with industry speakers, including Google engineers, for 100+ students.",
       ],
     },
     {
-      title: "Javascript",
-      company_name: "",
-      // icon: tesla,
-      // iconBg: "#E6DEDD",
-      date: "January 2024 - Feb 2024",
+      title: "Competitive Programming",
+      company_name: "Codeforces · CodeChef",
+      date: "2023 – Present",
       points: [
-        "Started with foundational concepts of JavaScript, including variables, data types, and control flow structures.",
-        "Progressed to more advanced topics such as functions, arrays, objects, and prototypes.",
-        "Delved into DOM manipulation to dynamically interact with web page elements and create responsive user interfaces.",
-        "Explored asynchronous programming with promises and callbacks to handle operations such as fetching data from servers.",
+        "Codeforces Specialist with a peak rating of 1417 — consistently placed in top 20–25% globally in Div. 2 rounds.",
+        "CodeChef 3-star rated with a max rating of 1671.",
+        "Global Rank 284 in CodeChef Starters 180, Rank 535 in Starters 196, and Rank 676 in Starters 170.",
+        "Global Rank 2192 in Codeforces Round 1082 (Div. 2), 2164 in Round 1003 (Div. 4), and 2934 in Round 1016 (Div. 3).",
       ],
     },
     {
-      title: "React/Tailwind CSS",
-      // company_name: "Shopify",
-      // icon: shopify,
-      // iconBg: "#383E56",
-      date: "March 2024 - April 2024",
+      title: "Full-Stack Development",
+      company_name: "Self-Directed · Open Source",
+      date: "2024 – Present",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
-    {
-      title: "Three JS",
-      // company_name: "Meta",
-      // icon: meta,
-      // iconBg: "#E6DEDD",
-      date: "April 2024 - Present",
-      points: [
-        "Delved into Three.js, a powerful JavaScript library for creating 3D graphics and animations in the browser.",
-        "Started by understanding the core concepts of 3D graphics, including scenes, cameras, and objects.",
-        "Explored the rendering pipeline and learned about materials, textures, and lighting to create realistic and immersive visuals.",
-        "Integrated external resources such as models and textures into Three.js projects to enhance realism and complexity.",
+        "Built and deployed CodeDuel — a production MERN online judge with Docker-sandboxed code execution, live at codeduel.online.",
+        "Engineered CollabCode — a real-time collaborative coding platform with WebRTC video, Socket.io signalling, and JWT auth.",
+        "Built Chunky — a resumable file upload platform handling files up to 1 GB with session-based chunk tracking.",
+        "Deployed applications on AWS EC2 with Nginx reverse proxy, Docker containers, and custom domains for public access.",
       ],
     },
   ];
-  
-  const testimonials = [
-    {
-      testimonial:
-        "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-      name: "Sara Lee",
-      designation: "CFO",
-      company: "Acme Co",
-      image: "https://randomuser.me/api/portraits/women/4.jpg",
-    },
-    {
-      testimonial:
-        "I've never met a web developer who truly cares about their clients' success like Rick does.",
-      name: "Chris Brown",
-      designation: "COO",
-      company: "DEF Corp",
-      image: "https://randomuser.me/api/portraits/men/5.jpg",
-    },
-    {
-      testimonial:
-        "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-      name: "Lisa Wang",
-      designation: "CTO",
-      company: "456 Enterprises",
-      image: "https://randomuser.me/api/portraits/women/6.jpg",
-    },
-  ];
-  
+
+  const testimonials = [];
+
   const projects = [
     {
-      name: "3Dshirt Website",
+      name: "CodeDuel",
       description:
-        "Discover the future of fashion with our immersive website showcasing 3D shirts crafted on Three.js. Experience the innovative blend of technology and style, redefining the way we wear and perceive clothing",
+        "Production MERN online judge that compiles, runs, and evaluates coding submissions with automated verdicts. Uses queue-based async evaluation, Docker-sandboxed execution for safety, Redis for job queuing, and leaderboard tracking. Deployed live on AWS EC2 with Nginx at codeduel.online.",
       tags: [
         {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        // {
-        //   name: "mongodb",
-        //   color: "green-text-gradient",
-        // },
-        {
-          name: "tailwind",
-          color: "pink-text-gradient",
-        },
-      ],
-      // image: carrent,
-      source_code_link: "https://www.linkedin.com/feed/update/urn:li:activity:7177350715026145281/",
-    },
-    {
-      name: "Signup-Page",
-      description:
-        "I experimented on the implication of a login page using appwrite, React and Tailwind ",
-      tags: [
-        {
-          name: "react",
+          name: "React · Node.js",
           color: "blue-text-gradient",
         },
         {
-          name: "AppWrite",
+          name: "Docker · Redis",
+          color: "green-text-gradient",
+        },
+        {
+          name: "MongoDB · AWS",
           color: "pink-text-gradient",
         },
-        // {
-        //   name: "scss",
-        //   color: "pink-text-gradient",
-        // },
       ],
-      // image: jobit,
-      source_code_link: "https://www.linkedin.com/feed/update/urn:li:activity:7175503268834361347/",
+      source_code_link: "https://github.com/Parthmudgal15105/CodeDuel",
     },
     {
-      name: "BankApp UI",
+      name: "CollabCode",
       description:
-        "Wanted to learn how to make modern looking websites using React JS and implemented a UI based design for initial react learning.",
+        "Real-time collaborative coding platform with JWT auth, guest access, private rooms, Monaco editor with cursor broadcasting, and debounced MongoDB persistence for reconnect recovery. WebRTC video via Socket.io signalling enables pair programming and technical interviews inside shared rooms.",
+      tags: [
+        {
+          name: "TypeScript · React",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Socket.io · WebRTC",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Node.js · MongoDB",
+          color: "pink-text-gradient",
+        },
+      ],
+      source_code_link: "https://github.com/Parthmudgal15105/CollabCode",
+    },
+    {
+      name: "Chunky",
+      description:
+        "Full-stack file upload platform supporting chunked and resumable transfers for files up to 1 GB. Features retryable chunk logic, session-based upload tracking, and validation APIs built for unstable networks. Includes real-time progress and upload history with resume, download, and delete workflows.",
       tags: [
         {
           name: "React",
           color: "blue-text-gradient",
         },
         {
-          name: "Tailwind",
+          name: "Node.js · Express",
           color: "green-text-gradient",
         },
         {
-          name: "Typescript",
+          name: "SQLite",
           color: "pink-text-gradient",
         },
       ],
-      // image: tripguide,
-      source_code_link: "https://github.com/Parthmudgal15105/BankAppUI1",
+      source_code_link: "https://github.com/Parthmudgal15105/FileUploadReal",
     },
   ];
-  
+
   export { services, technologies, experiences, testimonials, projects };

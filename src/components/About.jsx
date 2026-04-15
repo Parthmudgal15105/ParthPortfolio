@@ -40,18 +40,18 @@ const About = () => {
     <>
     <motion.div variants={textVariant()}>
       <p className={styles.sectionSubText}>Introduction</p>
-      <h2 className={styles.sectionHeadText} >Overview</h2>
+      <h2 className={styles.sectionHeadText}>Overview</h2>
     </motion.div>
 
-    <motion.p variants={fadeIn(",",0.1,1)} className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-
-As a passionate frontend developer, I specialize in crafting dynamic and visually appealing web experiences. <br />
- My expertise lies in utilizing technologies such as React, JavaScript, <br />
-  and Tailwind CSS to build intuitive user interfaces that engage and delight users. <br />
-   I thrive on the creative challenges of bringing designs to life, <br />
-   ensuring seamless functionality while maintaining an elegant aesthetic. <br />
-
-Driven by a curiosity for pushing boundaries, I'm particularly excited about delving into the world of Three.js, where I can explore the realms of 3D graphics and interactive animations to further elevate user engagement.
+    <motion.p variants={fadeIn("", "", 0.1, 1)} className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
+      B.Tech CSE student at MAIT and Codeforces Specialist building production-grade full-stack systems.
+      I work across the entire stack — from React and TypeScript frontends to Node.js APIs, MongoDB, Redis,
+      and Docker-sandboxed execution environments deployed on AWS EC2.
+      <br /><br />
+      My strongest work lives on the backend and infrastructure side: queue-based async processing,
+      real-time WebRTC collaboration, sandboxed code execution, and cloud deployment with Nginx.
+      I care about building systems that are reliable, scalable, and actually shipped —
+      with codeduel.online as a live example of that approach.
     </motion.p>
 
     <div className='mt-20 flex flex-wrap gap-10'>

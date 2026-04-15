@@ -13,8 +13,18 @@
             <div>
               <h1 className={`${styles.heroHeadText}`}>Hi, I'm <span className="text-[#915eff]">Parth</span></h1>
               <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-                  Frontend Developer, user <br className='sm:block hidden' /> interfaces and web applications
+                Full-Stack Developer — MERN, <br className='sm:block hidden' /> Docker & AWS · Competitive Programmer
               </p>
+              <div className='mt-6'>
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className='bg-[#915eff] text-white px-6 py-3 rounded-lg font-medium text-[16px] hover:bg-opacity-80 transition-all'
+                >
+                  View Resume
+                </a>
+              </div>
             </div>
         </div>
 
