@@ -1,7 +1,6 @@
   import {motion} from 'framer-motion';
   import { styles } from '../styles';
   import { ComputersCanvas } from './canvas';
-  import resume from '../assets/resume.pdf';
 
   const Hero = () => {
     return (
@@ -16,16 +15,6 @@
               <p className={`${styles.heroSubText} mt-2 text-white-100`}>
                 Full-Stack Developer — MERN, <br className='sm:block hidden' /> Docker & AWS · Competitive Programmer
               </p>
-              <div className='mt-6'>
-                <a
-                  href={resume}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className='bg-[#915eff] text-white px-6 py-3 rounded-lg font-medium text-[16px] hover:bg-opacity-80 transition-all'
-                >
-                  View Resume
-                </a>
-              </div>
             </div>
         </div>
 
