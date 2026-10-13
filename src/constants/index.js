@@ -135,30 +135,5 @@ import {
 
   const testimonials = [];
 
-  const projects = [
-    {
-      name: "HomeServerAI",
-      category: "AI OPERATIONS AGENT",
-      description: "A bounded AI agent that investigates home server incidents using diagnostic tools and evolving hypotheses. Combines local Ollama models, schema-constrained tool calling, and Qdrant runbook retrieval with a FastAPI orchestration layer. PostgreSQL audit trails, execution budgets, validation, approval-gated actions, and post-action verification keep operations controlled.",
-      tags: [
-        { name: "Python · FastAPI", color: "blue-text-gradient" },
-        { name: "Ollama · Qdrant", color: "green-text-gradient" },
-        { name: "PostgreSQL · Docker", color: "pink-text-gradient" },
-      ],
-      source_code_link: "https://github.com/Parthmudgal15105/HomeAiAgent",
-    },
-    {
-      name: "CodeDuel",
-      category: "FULL-STACK ONLINE JUDGE",
-      description: "An online judge that evaluates coding submissions against hidden test cases and records execution results and verdicts. Redis and BullMQ separate submission queuing from worker execution. Isolated Docker containers apply CPU, memory, PID, and network restrictions. Includes authentication, problem management, and submission history; deployed on a personal Linux home server.",
-      tags: [
-        { name: "React · Node.js · Express", color: "blue-text-gradient" },
-        { name: "Redis · BullMQ · Docker", color: "green-text-gradient" },
-        { name: "MongoDB · Linux", color: "pink-text-gradient" },
-      ],
-      source_code_link: "https://github.com/Parthmudgal15105/CodeDuel",
-      live_link: "https://codeduel.online",
-    },
-  ];
-
-  export { services, technologies, experiences, testimonials, projects };
+  export { services, technologies, experiences, testimonials };
+  export { projects } from './projects';
