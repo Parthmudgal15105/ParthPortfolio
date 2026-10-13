@@ -1,0 +1,38 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "dialafastener.com"
+        }
+      ],
+      "destination": "https://parthmudgal.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.dialafastener.com"
+        }
+      ],
+      "destination": "https://parthmudgal.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "portfolioparth.vercel.app"
+        }
+      ],
+      "destination": "https://parthmudgal.com/:path*",
+      "permanent": true
+    }
+  ]
+}
