@@ -1,4 +1,3 @@
-import React from 'react'
 import {Tilt} from 'react-tilt'
 import {motion} from 'framer-motion'
 import { styles } from '../styles'
@@ -7,17 +6,12 @@ import {fadeIn,textVariant} from '../utils/motion'
 import { SectionWrapper } from './hoc'
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='xs:w-[250px] w-full'>
+  <Tilt options={{ max: 45, scale: 1, speed: 450 }} className='xs:w-[250px] w-full'>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
     >
       <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
         className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
       >
         <img
@@ -44,14 +38,19 @@ const About = () => {
     </motion.div>
 
     <motion.p variants={fadeIn("", "", 0.1, 1)} className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-      B.Tech CSE student at MAIT and Codeforces Specialist building production-grade full-stack systems.
-      I work across the entire stack — from React and TypeScript frontends to Node.js APIs, MongoDB, Redis,
-      and Docker-sandboxed execution environments deployed on AWS EC2.
+      I’m a B.Tech CSE student at Maharaja Agrasen Institute of Technology, Delhi,
+      and a Codeforces Specialist focused on backend systems and AI applications.
+      I build AI agents, retrieval-augmented generation workflows, asynchronous job
+      pipelines, real-time systems, and Docker-based code execution on self-hosted infrastructure.
       <br /><br />
-      My strongest work lives on the backend and infrastructure side: queue-based async processing,
-      real-time WebRTC collaboration, sandboxed code execution, and cloud deployment with Nginx.
-      I care about building systems that are reliable, scalable, and actually shipped —
-      with codeduel.online as a live example of that approach.
+      My recent work includes HomeServerAI, a bounded operations agent using local LLMs
+      and operational runbooks, and CodeDuel, an online judge running on my personal Linux server.
+      At Wings2Aspirations, I tested software and AI outputs and researched product opportunities.
+      <br /><br />
+      Languages: C++, JavaScript, TypeScript, Python.<br />
+      Frameworks: React, Next.js, Node.js, Express.js, FastAPI, Socket.io.<br />
+      Data &amp; tools: MongoDB, PostgreSQL, Redis, Qdrant, Docker, BullMQ, Linux, Git.<br />
+      AI &amp; backend: AI agents, RAG, LLM tool calling.
     </motion.p>
 
     <div className='mt-20 flex flex-wrap gap-10'>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
@@ -28,7 +28,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop nav */}
-        <ul className='list-none hidden sm:flex flex-row gap-8 items-center'>
+        <ul className='list-none hidden xl:flex flex-row gap-8 items-center'>
           {navLinks.map((link) => (
             <li
               key={link.id}
@@ -53,7 +53,7 @@ const Navbar = () => {
               <img
                 src={github}
                 alt="github"
-                className='w-5 h-5 object-contain invert opacity-60 hover:opacity-100 transition-opacity'
+                className='w-5 h-5 object-contain opacity-60 hover:opacity-100 transition-opacity'
               />
             </a>
           </li>
@@ -80,7 +80,7 @@ const Navbar = () => {
         </ul>
 
         {/* Mobile hamburger */}
-        <div className='sm:hidden flex flex-1 justify-end items-center'>
+        <div className='xl:hidden flex flex-1 justify-end items-center'>
           <img
             src={toggle ? close : menu}
             alt="menu"

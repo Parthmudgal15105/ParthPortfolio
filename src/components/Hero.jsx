@@ -1,3 +1,4 @@
+  import resume from '../assets/resume.pdf';
   import {motion} from 'framer-motion';
   import { styles } from '../styles';
   import { ComputersCanvas } from './canvas';
@@ -11,10 +12,14 @@
               <div className='w-1 sm:h-80 h-40 violet-gradient' />
             </div>
             <div>
-              <h1 className={`${styles.heroHeadText}`}>Hi, I'm <span className="text-[#915eff]">Parth</span></h1>
+              <h1 className={`${styles.heroHeadText}`}>Hi, I’m <span className="text-[#915eff]">Parth</span></h1>
               <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-                Full-Stack Developer — MERN, <br className='sm:block hidden' /> Docker & AWS · Competitive Programmer
+                Software Developer · Backend, <br className='sm:block hidden' /> AI Agents · Self-Hosted Systems
               </p>
+              <div className="relative z-10 mt-6 flex flex-wrap gap-4">
+                <a href="#projects" className="rounded-lg bg-[#915eff] px-5 py-3 font-semibold">View projects</a>
+                <a href={resume} download="Parth-Mudgal-Resume.pdf" className="rounded-lg border border-secondary px-5 py-3 font-semibold">Download resume</a>
+              </div>
             </div>
         </div>
 
@@ -25,9 +30,9 @@
       </div>
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
-        <a href="#about">
+        <a href="#about" aria-label="Scroll to about">
           <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
-              <motion.dev
+              <motion.div
               animate={{
                 y:[0,24,0]}}
                 transition={{

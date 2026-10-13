@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "./hoc";
@@ -31,12 +30,11 @@ const achievements = [
   },
   {
     platform: "MAIT",
-    handle: "Top 5 CP",
-    rating: "Campus Rank: Top 5",
+    handle: "Community",
+    rating: "500+ students",
     highlights: [
-      "Ranked top 5 competitive programmers at MAIT",
       "Grew CP community to 500+ students",
-      "Coordinated seminars with Google engineers for 100+ students",
+      "Coordinated industry seminars for 100+ participants",
     ],
     color: "#ff6b6b",
     link: "https://github.com/Parthmudgal15105",
