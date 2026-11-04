@@ -22,3 +22,15 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Next.js
+.next
+out
+next-env.d.ts
+*.tsbuildinfo
+.vercel
+
+# Internal planning docs (contain notes on private/excluded projects)
+PORTFOLIO.md
+FINAL_REPORT.md
+reports/

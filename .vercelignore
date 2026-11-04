@@ -1,0 +1,8 @@
+node_modules
+.next
+khushi-mudgal-data-portfolio
+research
+reports
+*.md
+!README.md
+.claude

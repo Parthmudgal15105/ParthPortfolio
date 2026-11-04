@@ -1,40 +1,26 @@
 {
-  "name": "portfolio",
+  "name": "parthmudgal-com",
   "private": true,
-  "version": "0.0.0",
+  "version": "2.0.0",
   "type": "module",
-  "engines": {
-    "node": "^20.19.0 || >=22.12.0"
-  },
+  "engines": { "node": ">=20.9.0" },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "validate": "node --experimental-strip-types scripts/validate-registry.ts"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.3.3",
-    "@react-three/drei": "^9.105.3",
-    "@react-three/fiber": "^8.16.1",
-    "framer-motion": "^11.0.28",
-    "maath": "^0.10.7",
-    "prop-types": "^15.8.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-tilt": "^1.0.2",
-    "react-vertical-timeline-component": "^3.6.0",
-    "three": "^0.163.0"
+    "next": "16.4.5",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.3.3",
-    "@types/react": "^18.2.66",
-    "@types/react-dom": "^18.2.22",
-    "@vitejs/plugin-react": "^5.2.0",
-    "eslint": "^8.57.0",
-    "eslint-plugin-react": "^7.34.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.6",
-    "tailwindcss": "^4.3.3",
-    "vite": "^7.3.7"
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.9.0"
   }
 }

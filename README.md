@@ -1,8 +1,12 @@
-# React + Vite
+# parthmudgal.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal site and product pages for Parth Mudgal's apps. Next.js 16 (App Router), fully static, deployed on Vercel.
 
-Currently, two official plugins are available:
+```bash
+npm ci
+npm run dev        # http://localhost:3000
+npm run build      # validates the product registry, then builds every page
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Products: one file per app in `src/content/products/`, registered in `src/content/registry.ts`.
+- Docs: [ARCHITECTURE.md](ARCHITECTURE.md), [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md), [ADD_NEW_APP.md](ADD_NEW_APP.md), [DEPLOYMENT.md](DEPLOYMENT.md).

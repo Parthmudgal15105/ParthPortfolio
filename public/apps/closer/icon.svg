@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <rect width="1024" height="1024" rx="245" fill="#244c3d"/><title>Closer: an open C with a closing bar</title>
+  <path fill="#fff" d="M680 248H392c-80 0-144 64-144 144v240c0 80 64 144 144 144h288v-96H400c-31 0-56-25-56-56V400c0-31 25-56 56-56h280z"/>
+  <rect x="536" y="464" width="272" height="96" rx="48" fill="#fff"/>
+</svg>
