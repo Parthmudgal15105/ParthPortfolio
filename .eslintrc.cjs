@@ -18,4 +18,19 @@ module.exports = {
       { allowConstantExport: true },
     ],
   },
+  overrides: [
+    {
+      files: [
+        'src/components/About.jsx',
+        'src/components/Contact.jsx',
+        'src/components/Experience.jsx',
+        'src/components/Feedbacks.jsx',
+      ],
+      rules: { 'react-refresh/only-export-components': 'off' },
+    },
+    {
+      files: ['src/components/canvas/**/*.jsx'],
+      rules: { 'react/no-unknown-property': 'off' },
+    },
+  ],
 }

@@ -5,6 +5,7 @@ import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "./hoc";
 import { textVariant } from "../utils/motion";
+import PropTypes from "prop-types";
 
 
 const ExperienceCard = ({experience}) => (
@@ -26,13 +27,21 @@ const ExperienceCard = ({experience}) => (
     <ul className="mt-5 list-disc ml-5 space-y-2">
         {experience.points.map((point,index) => (
           <li key={`experience-point-${index}`}
-          className="text_white-100 text-[14px] pl-1 tracking-wider">
+          className="text-white-100 text-[14px] pl-1 tracking-wider">
               {point}
           </li>
         ))}
     </ul>
   </VerticalTimelineElement>
 )
+ExperienceCard.propTypes = {
+ experience: PropTypes.shape({
+  date: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  company_name: PropTypes.string.isRequired,
+  points: PropTypes.arrayOf(PropTypes.string).isRequired,
+ }).isRequired,
+};
 
 const Experience = () => {
   return (

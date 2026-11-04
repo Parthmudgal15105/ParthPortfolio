@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
 import { logo, menu, close, github } from '../assets';
@@ -13,8 +12,8 @@ const Navbar = () => {
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
 
         {/* Brand */}
-        <Link
-          to="/"
+        <a
+          href="/"
           className='flex items-center gap-2'
           onClick={() => {
             setActive('');
@@ -25,7 +24,7 @@ const Navbar = () => {
           <p className='text-white text-[18px] font-bold cursor-pointer'>
             Parth Mudgal <span className='sm:block hidden'>| MAIT</span>
           </p>
-        </Link>
+        </a>
 
         {/* Desktop nav */}
         <ul className='list-none hidden xl:flex flex-row gap-8 items-center'>

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "./hoc";
 import { fadeIn, textVariant } from "../utils/motion";
+import PropTypes from "prop-types";
 
 const achievements = [
   {
@@ -42,10 +43,12 @@ const achievements = [
 ];
 
 const AchievementCard = ({ index, platform, handle, rating, highlights, color, link }) => (
-  <motion.div
+  <motion.a
+    href={link}
+    target="_blank"
+    rel="noopener noreferrer"
     variants={fadeIn("up", "spring", index * 0.4, 0.75)}
-    className="bg-black-200 p-8 rounded-3xl w-full sm:w-[320px] cursor-pointer hover:scale-[1.02] transition-transform"
-    onClick={() => window.open(link, "_blank")}
+    className="block bg-black-200 p-8 rounded-3xl w-full sm:w-[320px] cursor-pointer hover:scale-[1.02] transition-transform focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
   >
     <div className="flex items-center gap-3 mb-4">
       <div
@@ -71,8 +74,17 @@ const AchievementCard = ({ index, platform, handle, rating, highlights, color, l
         </li>
       ))}
     </ul>
-  </motion.div>
+  </motion.a>
 );
+AchievementCard.propTypes = {
+  index: PropTypes.number.isRequired,
+  platform: PropTypes.string.isRequired,
+  handle: PropTypes.string.isRequired,
+  rating: PropTypes.string.isRequired,
+  highlights: PropTypes.arrayOf(PropTypes.string).isRequired,
+  color: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+};
 
 const Feedbacks = () => {
   return (

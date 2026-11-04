@@ -1,48 +1,51 @@
-import { useState, useRef } from "react";
+import { lazy, Suspense, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from '@emailjs/browser';
-import { EarthCanvas } from './canvas';
 import { SectionWrapper } from "./hoc";
 import { slideIn } from "../utils/motion";
 import { styles } from "../styles";
+import useNearViewport from '../utils/useNearViewport';
+
+const EarthCanvas = lazy(() => import('./canvas/Earth'));
 
 const Contact = () => {
   const formRef = useRef();
+  const [canvasRef, showEarth] = useNearViewport();
   const [form, setForm] = useState({
     name: '',
     email: '',
     message: '',
   });
   const [loading, setLoading] = useState(false);
+  const [feedback, setFeedback] = useState("");
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setForm({...form, [name]: value});
+    setForm((current) => ({ ...current, [name]: value }));
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (loading) return;
     setLoading(true);
-
-    emailjs.send('service_h11kf2h', 'template_0ky3bxk', {
-      from_name: form.name,
-      to_name: 'Parth',
-      from_email: form.email,
-      to_email: 'parthmudgal15105@gmail.com',
-      message: form.message,
-    }, 'GZJ796B9yjOjGluWj')
-     .then(() => {
-      setLoading(false);
-      alert("Thank you. I will get back to you as soon as possible.");
+    setFeedback("");
+    try {
+      await emailjs.send('service_h11kf2h', 'template_0ky3bxk', {
+        from_name: form.name,
+        to_name: 'Parth',
+        from_email: form.email,
+        to_email: 'parthmudgal15105@gmail.com',
+        message: form.message,
+      }, 'GZJ796B9yjOjGluWj');
       setForm({
         name: "",
         email: "",
         message: "",
       });
-    }, (error) => {
+      setFeedback("Thank you. I will get back to you as soon as possible.");
+    } catch {
+      setFeedback("Something went wrong. Please try again.");
+    } finally {
       setLoading(false);
-      console.error(error);
-
-      alert("Ahh, something went wrong. Please try again.");
-    })
+    }
   };
 
   return (
@@ -60,6 +63,9 @@ const Contact = () => {
             <input
               type='text'
               name='name'
+              autoComplete='name'
+              maxLength={120}
+              required
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
@@ -67,10 +73,13 @@ const Contact = () => {
             />
           </label>
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>What's Your Email</span>
+            <span className='text-white font-medium mb-4'>Your Email</span>
             <input
               type='email'
               name='email'
+              autoComplete='email'
+              maxLength={254}
+              required
               value={form.email}
               onChange={handleChange}
               placeholder="What's your Email?"
@@ -81,8 +90,9 @@ const Contact = () => {
             <span className='text-white font-medium mb-4'>Your Message</span>
             <textarea
               rows="7"
-              type='text'
               name='message'
+              maxLength={4000}
+              required
               value={form.message}
               onChange={handleChange}
               placeholder="What do you want to say?"
@@ -90,7 +100,9 @@ const Contact = () => {
             />
           </label>
 
-          <button type="submit" 
+          <p className="text-secondary" role="status" aria-live="polite">{feedback}</p>
+
+          <button type="submit" disabled={loading}
             className="bg-tertiary py-3 px-8 outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
           >
             {loading ? 'Sending...' : 'Send'}
@@ -98,8 +110,8 @@ const Contact = () => {
         </form>
       </motion.div>
 
-      <motion.div variants={slideIn('right', "tween", 0.2,1)} className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
-        <EarthCanvas/>
+      <motion.div ref={canvasRef} variants={slideIn('right', "tween", 0.2,1)} className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]">
+        {showEarth && <Suspense fallback={null}><EarthCanvas/></Suspense>}
       </motion.div>
     </div>
   );

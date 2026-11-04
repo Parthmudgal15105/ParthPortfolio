@@ -4,6 +4,7 @@ import { styles } from '../styles'
 import { services } from '../constants'
 import {fadeIn,textVariant} from '../utils/motion'
 import { SectionWrapper } from './hoc'
+import PropTypes from 'prop-types'
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt options={{ max: 45, scale: 1, speed: 450 }} className='xs:w-[250px] w-full'>
@@ -27,6 +28,11 @@ const ServiceCard = ({ index, title, icon }) => (
     </motion.div>
   </Tilt>
 );
+ServiceCard.propTypes = {
+  index: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+};
 
 
 const About = () => {
