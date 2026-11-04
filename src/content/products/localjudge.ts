@@ -205,7 +205,7 @@ const product: Product = {
     ],
     ownerToConfirm: [
       "Published Marketplace version is 0.3.1 (not 0.1.0 as recorded in SUBMISSION.md); confirm this page should describe 0.3.1.",
-      "Status \"available\": the published extension cannot import a problem without the unpublished Chrome companion. Confirm \"available\" with the coming-soon note, or switch to \"beta\" until the companion ships.",
+      "Status set to \"beta\" by the orchestrator because the published extension cannot import a problem without the unpublished Chrome companion. Switch to \"available\" once the companion is live.",
       "No public LocalJudge privacy policy existed before this page; review this policy before the Chrome companion is submitted (it adds Chrome-side permissions: activeTab, scripting, storage, 127.0.0.1 host access).",
       "Choose a license; the published extension declares none.",
     ],
