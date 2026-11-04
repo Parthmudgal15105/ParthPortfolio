@@ -3,6 +3,17 @@
 Run 2026-11-05 against:
 - the production build (`next build && next start`, localhost:3100)
 - Vercel preview https://portfolioparth-me70t7hzo-parths-projects-13e50cb0.vercel.app (protected; checked with `vercel curl`)
+- **production, https://parthmudgal.com**, after go-live (deployment portfolioparth-e4jpwcp8t)
+
+## Production verification (after go-live)
+
+| Check | Result |
+|---|---|
+| All 40 sitemap routes, OG images, robots, sitemap (40 `<loc>`), `/resume.pdf`, `/logo.svg`, `/projects/*`, `/apps/*` | ✅ 49/49 return 200 over HTTPS (HSTS on, CDN cache HIT) |
+| `/_next/image` optimized screenshots (100 sampled across all pages) | ✅ 100/100 return AVIF |
+| `/nope` → 404 · `/bounce` → 308 `/loopstudio` | ✅ |
+| `www.parthmudgal.com/*` → 308 apex · `dialafastener.com` → … → `parthmudgal.com/` (200) · `portfolioparth.vercel.app/catch` → 308 `parthmudgal.com/catch` | ✅ |
+| Lighthouse 12 mobile on production: `/` 99 · `/closer` 98 · `/catch` 99 · `/palmdeck` 99 (perf). Accessibility, best practices and SEO 100 on all. LCP 2.0–2.4 s, CLS 0, TBT ≤ 20 ms | ✅ |
 
 ## Results
 
@@ -57,6 +68,5 @@ These were measured locally, not on the Vercel CDN. LCP is the hero screenshot. 
 
 - No real-device testing (iOS Safari, Android Chrome). Responsive checks used Chromium at emulated widths.
 - No screen-reader walkthrough (VoiceOver). Automated checks and semantics only.
-- Lighthouse was not run against the Vercel preview because Deployment Protection blocks unauthenticated tools. Run it on production after launch.
-- Production (parthmudgal.com) is **not** updated yet. It still serves the old site and is waiting for owner approval. See DEPLOYMENT.md.
+- Lighthouse was not run against the protected preview; it was run on production after launch (see above).
 - ChatGPT-in-Chrome critique was not used. Research and copy review were done by Claude workers using web search. Sources are in `research/*.md`.

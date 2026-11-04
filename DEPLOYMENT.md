@@ -19,7 +19,13 @@ vercel deploy --yes                          # preview only, production untouche
 
 The verified preview is https://portfolioparth-me70t7hzo-parths-projects-13e50cb0.vercel.app. It is behind Vercel Deployment Protection, so open it while signed in to Vercel, or use `vercel curl <path> --deployment <url>`.
 
-## Going to production (needs owner approval)
+## Production release (done 2026-11-05, owner approved)
+
+- `master` was fast-forwarded to `site-v2`. The remote `master` had two newer commits touching only `khushi-mudgal-data-portfolio/` (a1ef61a, 522ee36), so they were merged in (b54b86e) rather than overwritten, then pushed.
+- Vercel built and promoted https://portfolioparth-e4jpwcp8t-parths-projects-13e50cb0.vercel.app to parthmudgal.com.
+- Verified on the live domain; see QA_REPORT.md, "Production verification".
+
+## Going to production (procedure used)
 
 The project deploys `master` automatically, so production must come from `master`. Otherwise the next push to `master` would bring back the old site.
 
