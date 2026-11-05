@@ -12,6 +12,16 @@ const nextConfig: NextConfig = {
       { source: "/apps", destination: "/#apps", permanent: false },
     ];
   },
+  // ClearDSA (separate Vercel project "cleardsa") served at /dsa.
+  // See ClearDSA/docs/DEPLOYMENT.md. Remove these two rewrites to unmount it.
+  async rewrites() {
+    return {
+      beforeFiles: [
+        { source: "/dsa", destination: "https://cleardsa.vercel.app/dsa/" },
+        { source: "/dsa/:path*", destination: "https://cleardsa.vercel.app/dsa/:path*" },
+      ],
+    };
+  },
   async headers() {
     return [
       {
