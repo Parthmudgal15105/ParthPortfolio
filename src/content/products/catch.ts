@@ -17,7 +17,6 @@ const product: Product = {
   requirements: "macOS 14 or later · iPhone with iOS 17 or later",
   status: "in-review",
   statusNote: "Mac and iPhone versions in App Review",
-  featured: true,
   order: 2,
 
   accent: "#8F5E05",

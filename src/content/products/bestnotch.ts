@@ -6,6 +6,7 @@ import type { Product } from "../types";
 
 const product: Product = {
   slug: "bestnotch",
+  featured: true,
   name: "BestNotch",
   tagline: "Music, files, clipboard, and a focus timer, tucked into the top of your Mac's screen.",
   headline: "Put the top of your screen to work.",

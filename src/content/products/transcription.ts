@@ -14,7 +14,6 @@ const product: Product = {
   requirements: "Desktop Chrome 111 or later",
   status: "available",
   statusNote: "Free on the Chrome Web Store",
-  featured: true,
   order: 3,
 
   accent: "#315b48",

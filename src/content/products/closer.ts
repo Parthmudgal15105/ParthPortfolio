@@ -14,7 +14,6 @@ const product: Product = {
   requirements: "macOS 14 Sonoma or later, Apple silicon",
   status: "available",
   statusNote: "Version 0.1.0 · Developer ID signed and notarized",
-  featured: true,
   order: 1,
 
   accent: "#30452a",

@@ -6,6 +6,7 @@ import type { Product } from "../types";
 // Packages/GestureKit/Sources/GestureConfig/Actions.swift, Packages/GestureKit/Sources/GestureNet/PSKTLS.swift.
 const product: Product = {
   slug: "gesturepad",
+  featured: true,
   name: "GesturePad",
   tagline: "Draw a symbol or swipe on your iPhone or iPad to run actions on your Mac.",
   headline: "Your Mac, a gesture away",

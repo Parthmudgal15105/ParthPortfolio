@@ -8,7 +8,11 @@ import { achievements, projects, site, stack, timeline } from "@/content/site";
 import { toCard } from "@/content/types";
 
 export default function Home() {
-  const featured = products.filter((p) => p.featured).slice(0, 4);
+  // Featured strip shows exactly these apps, in this order.
+  const featuredOrder = ["bestnotch", "palmdeck", "gesturepad", "loopstudio"];
+  const featured = featuredOrder
+    .map((slug) => products.find((p) => p.slug === slug && p.featured))
+    .filter((p) => p !== undefined);
   const availableCount = products.filter((p) => p.status === "available").length;
 
   const jsonLd = {
@@ -18,7 +22,7 @@ export default function Home() {
     url: site.url,
     jobTitle: site.role,
     address: { "@type": "PostalAddress", addressLocality: "Delhi", addressCountry: "IN" },
-    sameAs: [site.links.github, site.links.linkedin, site.links.x, site.links.codeforces],
+    sameAs: [site.links.github, site.links.linkedin, site.links.codeforces],
     alumniOf: "Maharaja Agrasen Institute of Technology",
   };
 
@@ -180,12 +184,12 @@ export default function Home() {
       <section className="section" id="contact" aria-labelledby="contact-title">
         <div className="wrap">
           <div className="contact">
-            <p className="eyebrow muted">Contact &amp; support</p>
+            <p className="eyebrow muted">Get in touch</p>
             <h2 className="h2 display" id="contact-title">
-              Questions, bugs or ideas? Write to me.
+              Something on your mind? I’d like to hear it.
             </h2>
             <p className="muted" style={{ maxWidth: "60ch" }}>
-              I read every message. For app help, each product has a support page with fixes for common problems — or just email and mention the app’s name.
+              A rough edge in one of my apps, a feature you wish existed, or a project you want to talk through — send an email and I’ll write back myself, usually within a couple of days.
             </p>
             <div className="btn-row">
               <a className="btn" href={`mailto:${site.email}`}>
@@ -193,9 +197,6 @@ export default function Home() {
               </a>
               <a className="btn btn--ghost" href={site.links.linkedin}>
                 LinkedIn
-              </a>
-              <a className="btn btn--ghost" href={site.links.x}>
-                X / Twitter
               </a>
             </div>
           </div>

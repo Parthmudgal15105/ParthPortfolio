@@ -12,7 +12,6 @@ export const site = {
   links: {
     github: "https://github.com/Parthmudgal15105",
     linkedin: "https://www.linkedin.com/in/parth-mudgal-aa0961240/",
-    x: "https://x.com/NormieProducer",
     codeforces: "https://codeforces.com/profile/Parthmudgal15105",
     codechef: "https://www.codechef.com/users/parthmudgal151",
   },

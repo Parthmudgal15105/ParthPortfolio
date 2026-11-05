@@ -25,9 +25,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "/",
   },
-  twitter: { card: "summary_large_image", creator: "@NormieProducer" },
+  twitter: { card: "summary_large_image" },
   robots: { index: true, follow: true },
-  icons: { icon: "/logo.svg" },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
+  },
 };
 
 export const viewport: Viewport = {

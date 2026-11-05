@@ -8,7 +8,7 @@ export function SiteHeader() {
       <div className="wrap site-header__row">
         <Link href="/" className="brand" aria-label="Parth Mudgal — home">
           <span className="brand__mark" aria-hidden="true">
-            P
+            P<span className="brand__dot">.</span>
           </span>
           <span>Parth Mudgal</span>
         </Link>
@@ -78,11 +78,6 @@ export function SiteFooter() {
               <li>
                 <a href={site.links.linkedin} rel="me">
                   LinkedIn
-                </a>
-              </li>
-              <li>
-                <a href={site.links.x} rel="me">
-                  X
                 </a>
               </li>
               <li>
