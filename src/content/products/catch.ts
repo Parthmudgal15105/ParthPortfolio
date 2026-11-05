@@ -245,7 +245,6 @@ const product: Product = {
       },
     ],
     ownerToConfirm: [
-      "Support email: the existing Catch site (catch-notes-support.vercel.app) and App Store Connect metadata use parthmudgal1510@gmail.com, while this page uses parthmudgal15105@gmail.com. Confirm which address is correct and update the other.",
       "The live Catch privacy policy only describes the Mac app. This version adds iPhone wording (local storage on iPhone, system photo picker, iPhone microphone setting) based on release/catch-ios-1.0/PRIVACY.md. Confirm, and update the live policy to match.",
       "The live policy's 'This website' section refers to the Vercel support site; confirm the same statement holds for parthmudgal.com hosting (no analytics scripts).",
     ],
