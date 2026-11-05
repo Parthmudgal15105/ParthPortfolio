@@ -12,7 +12,7 @@ export const site = {
   links: {
     github: "https://github.com/Parthmudgal15105",
     linkedin: "https://www.linkedin.com/in/parth-mudgal-aa0961240/",
-    codeforces: "https://codeforces.com/profile/Parthmudgal15105",
+    codeforces: "https://codeforces.com/profile/Parth1510",
     codechef: "https://www.codechef.com/users/parthmudgal151",
   },
   resume: "/resume.pdf",
@@ -49,7 +49,7 @@ export const timeline: { when: string; title: string; org: string; body: string 
 ];
 
 export const achievements: { label: string; value: string; href: string }[] = [
-  { label: "Codeforces Specialist · max rating", value: "1417", href: site.links.codeforces },
+  { label: "Codeforces Specialist · max rating", value: "1430", href: site.links.codeforces },
   { label: "CodeChef 3★ · max rating", value: "1671", href: site.links.codechef },
   { label: "Best CodeChef rank (Starters 180)", value: "#284", href: site.links.codechef },
   { label: "MAIT CP community grown to", value: "500+", href: site.links.github },
