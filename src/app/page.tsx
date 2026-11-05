@@ -32,12 +32,12 @@ export default function Home() {
 
       <section className="home-hero">
         <div className="wrap">
-          <p className="eyebrow">Parth Mudgal · {site.role}</p>
+          <p className="eyebrow">Parth Mudgal · App developer · Full-stack · Competitive programmer</p>
           <h1 className="home-hero__title display" style={{ marginTop: 18 }}>
-            Small, careful software for Mac, iPhone <em>&amp; the browser.</em>
+            I build software. <em>Here’s the work.</em>
           </h1>
           <p className="lede" style={{ marginTop: 24 }}>
-            I design and build focused apps that solve one everyday problem well — quitting a pile of Mac apps, catching a thought before it’s gone, sketching a song idea. Most of them work entirely on your device, with no accounts and no tracking.
+            Apps for Mac, iPhone and the browser, full-stack web systems, and a lot of competitive programming along the way. Most of the apps run entirely on your device, with no accounts and no tracking.
           </p>
           <div className="btn-row" style={{ marginTop: 32 }}>
             <a className="btn" href="#apps">
